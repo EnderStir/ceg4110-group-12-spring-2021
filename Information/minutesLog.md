@@ -3,10 +3,6 @@
 ##### Group 12 
 
 
-
-
-
-
 `Waterfall process  for Discord Monster Hunter World Bot`
 
 

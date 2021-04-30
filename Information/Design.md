@@ -1,15 +1,20 @@
 
 ######CEG 4110 Spring 2021  Design.md documentation 
 
-######Joshua Rupp, Kyle Sturdevant, Trenton Brown --> Group 12
+###### Kyle Sturdevant, Trenton Brown, Joshua Rupp --> Group 12
 
 
 #Frontend
+
+
+######Design REQ 010  by Kyle 
 
 **REQ: 010**
 
 - Command: `-overview`
 - Return: A paragraph explaining the game Monster Hunter World
+
+######REQ 020 Design:  by  Kyle
 
 **REQ: 020**
 
@@ -35,6 +40,8 @@
         - Type
         - Description
 
+######REQ 030 Design:  by  Kyle
+
 **REQ: 030**
 
 - Command: `-weapons <id>|<name> (page)`
@@ -58,8 +65,12 @@
         - Name
         - Type
         - Attack
-    
+
+######REQ 040 Design:  by  Kyle
+
 **REQ: 040**
+
+
 - Command: `-material <id>|<name> (page)`
     - The required field will be either a number (id) or a string (name).
     - There is then an optional field that provides a page number if previous results went past current page limit.
@@ -78,7 +89,10 @@
         - Name
         - Description
 
+######REQ 050 Design:  by  Kyle
+
 **REQ: 050**
+
 - Command: `-kit {<weapon>, <armor>, <decorations>}`
     - The required field will be some combination of a weapon, armor, and decorations
 - Return:
@@ -87,7 +101,11 @@
     - If any input is provided, it will save this data for the specific user
         - Output message saying kit was saved.
 
+
+######REQ 060 Design:  by  Kyle
+
 **REQ: 060**
+
 - Command: `-vendors (page)`
     - There is then an optional field that provides a page number if previous results went past current page limit.
 - Return:
@@ -98,7 +116,11 @@
     - If a page number is specified, it will lists the 5 vendors for that page
         - If the page number mulitiplied by 5 is greater then the number of vendors, display page error
    
+   
+######REQ 070 Design:  by  Kyle
+
 **REQ: 070**
+
 - Command: `-soldby <id>|<name> (page)`
     - The required field will be either a number (id) or a string (name).
     - There is then an optional field that provides a page number if previous results went past current page limit.
@@ -115,7 +137,11 @@
         - Type
         - Description
 
+
+######REQ 080 Design:  by  Trent
+
 **Requirement 080**  
+
 This design was chosen because it will get the user the list of events, and they would
 then be able to look up the individual event so that they could learn what the event entails.
 - Command: `-events [id]` 
@@ -130,7 +156,12 @@ then be able to look up the individual event so that they could learn what the e
         - startTimeStamp
         - endTimeStamp
   
+  
+######REQ 090 Design:  by  Trent
+
+
 **Requirement 090**  
+
 This design choice was made because if the user failed to define either or the parameters,
 "ecosystem" or "rank", there would be too much information to display.
 - Command: `-location [ecosystem] [rank]`  
@@ -142,7 +173,12 @@ This design choice was made because if the user failed to define either or the p
         - id
         - Name
         
+        
+######REQ 100 Design:  by  Trent  
+
+ 
 **Requirement 100**  
+
 This design choice was made because there are only a few tools with small descriptions. So a list
 of the tools being output should pose no problem and should reduce the number of chances a user
 has to try and use the command and not get the desired results.
@@ -151,13 +187,21 @@ has to try and use the command and not get the desired results.
     - Name
     - Description
 
+
+######REQ 110 Design:  by  Trent
+
+
 **Requirement 110**
+
 Not every aspect of the game will have a tip to go with it. So the choice was made to provide
 a random tip rather than have the user guess at which aspect has a tip by passing a parameter.
 - Command: `-tip`  
 - Return: A random tip about gameplay  
 
+######REQ 120 Design:  by  Trent
+
 **Requirement 120**  
+
 The choice made for this requirement is for the same reason as requirement 90, if either
 one of the parameters there would be too much information to output.
 - Command: `-Guiding [area] [level]`
@@ -171,7 +215,7 @@ one of the parameters there would be too much information to output.
 ------------------------------------------------------------------------------------------
 
 
-######REQ 130 Design: 
+######REQ 130 Design: By Josh
 
 
 Command name: _-item_recipe_
@@ -215,7 +259,7 @@ example of _item make_ command return value(s):
 ------------------------------------------------------------------------------------------
 
 
-######REQ 140 Design:
+######REQ 140 Design: By Josh
 
 
 Command name: _-add_ 
@@ -261,7 +305,7 @@ examples of _-add_ command usage:
 ------------------------------------------------------------------------------------------
 
 
-######REQ 150 Design:
+######REQ 150 Design: By Josh
 
 
 Command name: _-edit_ 
@@ -310,7 +354,7 @@ examples of _-edit_  command usage:
 ------------------------------------------------------------------------------------------
 
 
-######REQ 160 Design:
+######REQ 160 Design:  Josh
 
 
 Command name: _-my_victims_ 
@@ -354,7 +398,7 @@ examples of _my_victims_ command usage:
 ------------------------------------------------------------------------------------------
 
 
-######REQ 170 Design:
+######REQ 170 Design:  by Josh
 
 
 Command name: _-victimized_ 
@@ -375,7 +419,7 @@ examples of _-victimized_  command usage:
 
 
 
-######REQ 250 Design:
+######REQ 250 Design:   by Josh
 
 
 Command name: _-help_ 
@@ -402,7 +446,38 @@ examples of _help_ command usage:
 
 `-help`
 
+######REQ 260 Design: By Josh
 
+**Design of format table**:
+
+The table will output the data obtained by the Monster Hunter World bot, in a nice organized 
+column, row matrix style table. The headers of the table will organize the different types of 
+data in each column so that the user has a nice, formatted, organized visual of the searched 
+results. That way this avoids any cryptic confusing output. More importantly however, the 
+user does not feel annoyed by the unprofessional presentation of the data, and not want to use 
+the bot. 
+
+Considering the case that some lines or rows might have more data than others. I feel that 
+text wrapping per column is a must for this table. We do not want to consider the possibility 
+that all data in every row is going to be the same size or same length. More importantly, 
+we do not want to have to truncate strings, in order to make the data all fit. This is a bad 
+design for a table, and would look very unprofessional. Therefore, I would have to say that 
+text wrapping needs to be at the center of the tables functionality. 
+
+The table will have the ability to delete a row if needed, or clear the whole table in case 
+of extengient circumstances. I mean why not, have that ability. Moreover, the table should be 
+able to calculate the maximum length for each column.Then devise a solution in case 
+one column takes up the whole length of the table, or the summations of each column's width 
+is greater or equal to a maximum specified width.  The reason for this is there is implicit text 
+wrapping in discord after 80 characters are entered on a line. So the table will need to 
+have the ability to compute the total width of every column and ensure that it is less than 80
+characters. 
+
+There are some nice python libraries for formatted tables. I choose to go with prettytables. 
+Although there many others to choose from. I simply feel that an ACSII character boarder and 
+formatted table is best for this design, because the table needs to be able to be printed on 
+discord. I think that a more simple text formatted table should have a very low probability of  
+compatibility issues with Discord. 
 
 
 #Backend
