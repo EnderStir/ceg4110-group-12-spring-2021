@@ -2,7 +2,7 @@
 import prettytable
 
 """
-This module is designed to print the data returned from the Monster Hunter World bot.  This module implementes the 
+This module is designed to print the data returned from the Monster Hunter World bot.  This module implements the 
 REQ 260 in the Information/Requirements.md file. 
 """
 
