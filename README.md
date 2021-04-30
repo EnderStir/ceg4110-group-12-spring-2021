@@ -20,7 +20,7 @@ recorded and that process down.
 the implementations for the designs of the requirements for the Monster Hunter World bot's
 behavior. 
 
-Implementations of our designs can be  found in the code, which is in the develop branch.
+Implementations of our designs can be  found in the code, which is in the main branch.
 The implementations of the output table of the bot commands are found in _pTables.py_.  
 The implementations for the commands, response, and requests are all found in _the main.py,
 mhwRequest.py, commands.py, and running.py_ files.  
