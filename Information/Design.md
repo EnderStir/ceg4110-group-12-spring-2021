@@ -354,7 +354,7 @@ examples of _-edit_  command usage:
 ------------------------------------------------------------------------------------------
 
 
-######REQ 160 Design:  Josh
+######REQ 160 Design:  By Josh
 
 
 Command name: _-my_victims_ 
