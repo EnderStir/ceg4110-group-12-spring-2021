@@ -34,4 +34,5 @@ Req ID      Requirement
 - 220         The bot shall display object specific data when only one results is returned  
 - 230         The bot shall display a list of results when more than one result is returned  
 - 240         The Backend shall be a REST API providing information related to the Monster Hunter World game. 
-
+- 250         The bot shall display a list of commands available
+- 260         The bot will display output of commands in a formatted table when applicable. 

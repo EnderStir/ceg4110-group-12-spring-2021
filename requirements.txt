@@ -1,0 +1,6 @@
+discord
+replit
+requests
+pytest
+coverage
+prettytable
